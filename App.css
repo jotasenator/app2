@@ -1,61 +1,82 @@
+/*navBar*/
+.navBar ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  background-color: #333;
+  border: 5px solid #333333;
+  user-select: none;
+}
+.navBar ul a {
+  text-decoration: none;
+  color: #999;
+  display: block;
+  padding: 15px;
+  margin: 0 5px;
+}
+.navBar ul a:hover,
+.navBar ul a:focus {
+  background-color: #fff;
+  color: #222;
+  border-radius: 5px;
+}
+.toRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  right: 50px;
+}
+.me {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+.jotas {
+  padding: 0 20px;
+}
+.jotas li {
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+  cursor: none;
+  user-select: none;
+  border: solid white;
+  border-radius: 15px;
+}
+.jotas li p {
+  background-color: #333333;
+  color: white;
+}
+.rotate {
+  animation: jotas 10s infinite;
+}
+@keyframes jotas {
+  0% {
+    transform: rotate(360deg);
+  }
+  5% {
+    transform: rotate(0deg);
+  }
+}
+/*container*/
 .container {
   height: 100%;
   width: 70%;
   margin: 0 auto;
 }
+/*dentro de container*/
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 20px;
-  position: fixed;
-  border-bottom: 1px solid blue;
-}
-nav a {
-  text-decoration: none;
-  color: blue;
-}
-
-nav :hover {
-  color: white;
-}
-
-h3 {
-  font-size: 30px;
-  font-weight: 500;
-  text-shadow: 2px 18px 8px black;
-}
-button {
-  color: #007bff;
-  width: 150px;
-  background-color: white;
-  padding: 5px;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  border: none;
-  font-size: larger;
-  border-radius: 5px;
-  /*transition: 0.5s all;*/
-}
-button:hover {
-  color: white;
-  background-color: #0056b3;
-}
-
-.content1,
-.content2 {
-  display: flex;
-  text-align: justify;
-}
 p,
 ol,
 ul {
   background-color: white;
-
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -63,9 +84,73 @@ ul {
   word-wrap: break-word;
   line-height: 1.5;
   font-size: 20px;
+  text-align: justify;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: blue;
 }
 li {
+  padding: 5px;
+}
+/*slider*/
+.sliderSize {
+  width: 50%;
+  height: 500px;
+  float: right;
+  margin-left: 15px;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 5px;
+}
+.insidePic {
+  height: 387px;
+}
+/*form*/
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+form:focus-within {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 5px #999;
+}
+input,
+textarea {
+  font-size: 20px;
+  color: #333;
   line-height: 1.5;
-  padding-bottom: 20px;
-  padding-right: 20%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  border-radius: 5px;
+}
+textarea {
+  height: 250px;
+}
+.enviar {
+  background-color: white;
+}
+.enviar:hover {
+  background-color: #333333;
+  color: white;
+}
+/*footer*/
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  margin-top: 150px;
+  background-color: #333333;
+  height: 150px;
+  color: #999;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
 }
